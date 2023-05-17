@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1"content="width=device-height, initial-scale=1" /> 
+ 
+        <title>2021 SGPA 3rd sem</title>
+        <script>
+
+    function calculate()
+        {
+
+        var a=parseInt(document.getElementById("mat").value);
+        var b=parseInt(document.getElementById("dsa").value);
+        var c=parseInt(document.getElementById("ade").value);
+        var d=parseInt(document.getElementById("co").value);
+        var e=parseInt(document.getElementById("c++").value);
+        var f=parseInt(document.getElementById("java").value);
+        var g=parseInt(document.getElementById("scr").value);
+        var h=parseInt(document.getElementById("kannada").value);
+
+       var aa=3*marks(a);
+       var ab=4*marks(b);
+       var ac=4*marks(c);
+       var ad=3*marks(d);
+       var ae=1*marks(e);
+       var af=1*marks(f);
+       var ag=1*marks(g);
+       var ah=1*marks(h);
+       
+
+        var z=((aa+ab+ac+ad+ae+af+ag+ah)/200)*10;
+
+       
+        document.getElementById("res").value=parseFloat(z);
+        }
+        
+        function marks(y)
+        {
+            if(y>=90)
+            return 10;
+            else if (y<=89&&y>=80)
+            return 9;
+            else if (y<=79&&y>=70)
+            return 8;
+            else if (y<=69&&y>=60)
+            return 7;
+            else if (y<=59&&y>=50)
+            return 6;
+            else if (y<=49&&y>=45)
+            return 5;
+            else if (y<=44&&y>=40)
+            return 4;
+            else
+            return 0;
+            
+        }
+
+
+
+        </script>
+
+        <style>
+            
+            #calc {
+               background-color:  aqua;
+               padding: 0.5% 2% 0.5% 2%;
+               font-size: 100%;
+            }
+            
+            label{
+               
+                color: aliceblue;
+                margin-top: 5%;
+                font-weight: bold;
+            }
+            input{
+                background-color: rgb(221, 239, 137);
+                margin: 1% 0 2% 0 ;
+                font-weight: bold;
+                text-align: center;
+                font-size: 100%;
+            }
+           *{
+            background-color: rgb(5, 13, 76);
+           }
+           #res{
+            font-size: 200%;
+            width: 150px;
+            background-color: rgb(217, 237, 198);
+            color: red;
+           }
+           #h{
+            color: red;
+            font-size: x-large;
+            margin-bottom: 7%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           
+           }
+
+            
+        </style>
+
+
+    </head>
+<center>
+    <body id="bd">
+        <b id="h">2021 SGPA CALCULATOR</b>
+        <br>
+        <br>
+        
+        <label>21MAT31          :  </label>
+        <br>
+        <input type="text" id="mat">
+    </br>
+        <label>21CS32  :  </label>
+</br>
+        <input type="text" id="dsa">
+    </br>
+        <label>21CS33 :  </label>
+</br>
+        <input type="text" id="ade">
+    </br>
+        <label>21CS34  :  </label>
+        <br>
+        <input type="text" id="co">
+
+    </br>
+        <label>21CS382 :  </label>
+        <br>
+        <input type="text" id="c++">
+
+    </br>
+         <label>21CSL35 :  </label>
+         <br>
+         <input type="text" id="java">
+     </br>
+        <label> 21SCR36 :  </label>
+        <br>
+        <input type="text" id="scr">
+
+    </br>
+        <label>21KSK37           :  </label>
+        <br>
+        <input type="text" id="kannada">
+
+    </br>
+        <br>
+
+    <input type="button" value="calculate" id="calc" onclick="calculate()"></input>
+
+    <p style="color:red; font-size:large">Your CGPA/SGPA is</p>
+    <input type="text" id="res" disabled>
+
+</center>
+    </body>
+  
+
+
+</html>
