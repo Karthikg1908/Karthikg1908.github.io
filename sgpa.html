@@ -5,10 +5,8 @@
  
         <title>2021 SGPA 3rd sem</title>
         <script>
-
     function calculate()
         {
-
         var a=parseInt(document.getElementById("mat").value);
         var b=parseInt(document.getElementById("dsa").value);
         var c=parseInt(document.getElementById("ade").value);
@@ -17,7 +15,6 @@
         var f=parseInt(document.getElementById("java").value);
         var g=parseInt(document.getElementById("scr").value);
         var h=parseInt(document.getElementById("kannada").value);
-
        var aa=3*marks(a);
        var ab=4*marks(b);
        var ac=4*marks(c);
@@ -26,41 +23,31 @@
        var af=1*marks(f);
        var ag=1*marks(g);
        var ah=1*marks(h);
-       
-
-        var z=((aa+ab+ac+ad+ae+af+ag+ah)/200)*10;
-
-       
+        var z=((aa+ab+ac+ad+ae+af+ag+ah)/160)*8;
         document.getElementById("res").value=parseFloat(z);
         }
-        
         function marks(y)
         {
-            if(y>=90)
-            return 10;
-            else if (y<=89&&y>=80)
-            return 9;
-            else if (y<=79&&y>=70)
-            return 8;
-            else if (y<=69&&y>=60)
-            return 7;
-            else if (y<=59&&y>=50)
-            return 6;
-            else if (y<=49&&y>=45)
-            return 5;
-            else if (y<=44&&y>=40)
-            return 4;
-            else
+            if(y<40)
             return 0;
-            
+            else if (y>=40&&y<45)
+            return 4;
+            else if (y>=45&&y<50)
+            return 5;
+            else if (y>=50&&y<60)
+            return 6;
+            else if (y>=60&&y<70)
+            return 7;
+            else if (y>=70&&y<80)
+            return 8;
+            else if (y>=80&&y<90)
+            return 9;
+			else  (y>=90&&y<100)
+            return 10;   
         }
-
-
-
         </script>
-
-        <style>
-            
+       
+	   <style>            
             #calc {
                background-color:  aqua;
                padding: 0.5% 2% 0.5% 2%;
@@ -93,14 +80,9 @@
             color: red;
             font-size: x-large;
             margin-bottom: 7%;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-           
-           }
-
-            
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
+           }            
         </style>
-
-
     </head>
 <center>
     <body id="bd">
@@ -113,11 +95,11 @@
         <input type="text" id="mat">
     </br>
         <label>21CS32  :  </label>
-</br>
+	</br>
         <input type="text" id="dsa">
     </br>
         <label>21CS33 :  </label>
-</br>
+	</br>
         <input type="text" id="ade">
     </br>
         <label>21CS34  :  </label>
@@ -153,7 +135,4 @@
 
 </center>
     </body>
-  
-
-
 </html>
